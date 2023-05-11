@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.js">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Moqups</div>
+        <div class="navigation">
+            <div class="nav-item">Home</div>
+            <div class="nav-item nav-center">Our Packages</div>
+            <div class="nav-item">Contact Us</div>
+        </div>
+    </header>
+    <main class="main">
+        <section id="home">
+            <div class="banner">
+                <h1>Top Rated E-Groceries Shop In <br>Indonesia</h1>
+                <p class="pi">Every Day with best ingredients</p>
+
+            </div>
+        </section>
+        <section class="main-form">
+            <div class="element left">
+                <div>
+
+                <img class="img-slideshow"
+                src="https://titipku.com/blog/wp-content/uploads/2022/04/Foto-Freshmarket-PIK-05551-1024x576.jpg">
+                
+                
+                
+                <img class="img-slideshow"
+                src="https://awsimages.detik.net.id/community/media/visual/2022/03/31/tersesat-di-hutan-amazon-1.jpeg?w=700&q=90">
+
+
+                <img class="img-slideshow"
+                src="https://awsimages.detik.net.id/community/media/visual/2020/09/24/air-terjun-bawah-laut-mauritius-1_169.jpeg?w=1200">
+
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button>
+                </div>
+                <script>
+                    
+                    var slideIndex = 1;
+                    setInterval(function() {
+                        plusDivs(1);
+
+                    }, 1000);
+                    
+                    function plusDivs(indec) {
+                        showImage((slideIndex += index));
+
+                    }
+
+                    function showImage(index) {
+                        var i;
+                        var imgList = document.getElementByClassName("img-slideshow");
+                        if (index > imgList.length) slideIndex = 1;
+                        else if (index < 1) slideIndex = imgList.length;
+
+                        for (i = 0; i < imgList.length; i++) {
+                            imgList[i].style.display = "none";
+                        }
+                        imgList[slideIndex - 1].style.display = "block";
+                       
+                    }
+                </script>
+                <b>Use this space to provide users with more information about your offer. <br>Consider it a follow-up your headline and explain the benefits of <br>your service or product</b>
+                <br>
+                <div class="poin cp5">
+                    <div class="nopoin"><p>1</p></div>
+                    <br>
+                    <p class="isipoin">Your first feature, written in the form of a benefit statement</p>
+                </div>
+                <div class="poin cp5">
+                    <div class="nopoin"><p>2</p></div>
+                    <br>
+                    <p class="isipoin">Your second feature, written in the form of a benefit statement</p>
+
+                </div>
+                <div class="poin cp5">
+                    <div class="nopoin"><p>3</p></div>
+                    <br>
+                    <p class="isipoin">Your third feature, written in the form of a benefit statement</p>
+                </div>
+    
+                
+
+            </div>
+            <div class="element right">
+                <div class="form">
+                    <h3>Contact Us</h3>
+                    <p class="ayam">Sales akan anda 1x24 jam<br>setelah data anda kami terima.</p>
+
+                    <label>Your Name</label>
+                    <input  id="nama" name="name" class="input" placeholder="First and last name">
+
+                    <label>Email Address</label>
+                    <input  id="email" name="name" class="input" placeholder="example@gmail.com">
+
+                    <p class="bebek">What are you intrested in?</p>
+                    <select name="Intrested" class="input" >
+                        <option>--Select Option--</option>
+                        <option>Nasgor</option>
+                        <option>Naskun</option>
+                        <option>Ayam</option>
+                    </select>
+
+
+                    <button class="btn">SEND</button>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>
